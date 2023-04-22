@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.shadow_full {
+    box-shadow: 0 0 300rem 300rem #f9e2af;
+}
