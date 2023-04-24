@@ -12,3 +12,26 @@
 .shadow_full {
     box-shadow: 0 0 300rem 300rem #f9e2af;
 }
+
+@media (max-width: 1746px) {
+    * {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .hide {
+        display: none;
+    }
+}
+
+@media (max-width: 1336px) {
+    .side_navbar {
+        display: none;
+    }
+    .main_div {
+        width: 10000%;
+        margin-right: 3rem;
+    }
+    .hamburger_menu {
+        display: block;
+    }
+}

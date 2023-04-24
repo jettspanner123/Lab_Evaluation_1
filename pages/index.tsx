@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 import SideNavbar from "../components/SideNavbar";
 import TopNavbar from "../components/TopNavbar";
 import LocalStorage from "../components/LocalStorage";
+import HamburgerMenu from "../components/HamburgerMenu";
 const Home: NextPage = () => {
   return (
-    <>
+    <div className="">
       <LocalStorage />
-      <div className="w-[100vw] h-[100vh] bg-[#F9E2AF]  justify-center items-center md:flex hidden ">
+      <div className="w-[100vw] h-[100vh] bg-[#F9E2AF] relative  justify-center items-center md:flex hidden ">
         <motion.div
           className="flex justify-around gap-[1rem]"
           animate={{
@@ -70,10 +71,11 @@ const Home: NextPage = () => {
               transition={{
                 delay: 3,
               }}
-              className="w-[80%] bg-[#F9E2AF] border-[4px] border-black m-4 rounded-xl mr-5 "
+              className="w-[80%] main_div bg-[#F9E2AF] border-[4px] border-black m-4 rounded-xl mr-5 "
             >
               {
-                <div className="w-full  m-6 flex justify-between">
+                <div className="w-full  m-6 flex justify-between pr-12  ">
+                  <HamburgerMenu />
                   <motion.div
                     animate={{ rotate: "720deg" }}
                     transition={{
@@ -82,9 +84,9 @@ const Home: NextPage = () => {
                       repeat: 1000,
                       stiffness: 1,
                     }}
-                    className="w-[10rem]  h-[10rem] relative rounded-[50%] bg-white border-[4px] border-black"
+                    className="w-[8rem]  h-[8rem] relative  rounded-[50%] bg-white border-[4px] border-black"
                   >
-                    <div className="w-[2rem] h-[2rem] bg-[#f9e2af] absolute left-4 top-[3.6rem] text-[#F9E2AF] border-[4px] border-black rounded-[50%]"></div>
+                    <div className="w-[1.5rem] h-[1.5rem] bg-[#f9e2af] absolute left-4 top-[3.6rem] text-[#F9E2AF] border-[4px] border-black rounded-[50%]"></div>
                   </motion.div>
                 </div>
               }
@@ -99,11 +101,11 @@ const Home: NextPage = () => {
       </div>
       {/* FOR MOBILE PHONES DIKHEAD */}
       <div className="md:hidden block w-[100vw] h-[100vh] p-4 bg-[#F9E2AF]">
-        <div className="w-full bg-white rounded-xl h-full p-4">
+        <div className="w-full bg-white rounded-xl h-full border-[4px] border-black p-4">
           <TopNavbar />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
