@@ -36,7 +36,7 @@ const Home: NextPage = () => {
             </motion.div>
           </motion.div>
           <motion.div
-            className="bg-white center_div rounded-[50%] h-[4rem] w-[4rem] flex overflow-hidden justify-center md:justify-start "
+            className="bg-white center_div rounded-[50%] h-[4rem] w-[4rem] flex overflow-hidden justify-center md:justify-start`"
             animate={{
               y: 0,
               height: "96vh",

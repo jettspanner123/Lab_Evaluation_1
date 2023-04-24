@@ -5,6 +5,7 @@ import { MdOutlinePerson } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import { IoMdKey } from "react-icons/io";
 import { Button } from "./Button";
+import {BsGoogle, BsTwitter, BsFacebook, BsGithub, BsGit} from 'react-icons/bs'
 const SideNavbar = () => {
   const [active, setActive] = useState(0);
   const [signUpActive, setSignUpActive] = useState(false);
@@ -13,10 +14,6 @@ const SideNavbar = () => {
   const [loginPassword, setLoginPassowrd] = useState("");
   const [signupUsername, setSignupUsername] = useState("");
   const [signupPassword, setSignupPassword] = useState("");
-
-
-
-
   return (
     <motion.div
       animate={{ x: 0 }}
@@ -36,7 +33,7 @@ const SideNavbar = () => {
         <li
           className={
             active == 0
-              ? "bg-white border-[4px]  border-black text-black  my-6 text-[1.5rem] w-[80%] mx-auto p-4 rounded-xl text-center cursor-pointer hover:bg-white  transition-all duration-300"
+              ? "bg-white border-[4px] border-b-[10px]  border-black text-black  my-6 text-[1.5rem] w-[80%] mx-auto p-4 rounded-xl text-center cursor-pointer hover:bg-white  transition-all duration-300"
               : "text-[1.5rem] w-[80%] my-6  mx-auto p-4 rounded-xl border-[4px] border-[#f9e2af] text-center cursor-pointer hover:bg-white hover:text-[#F9E2AF]  text-white transition-all duration-300"
           }
           onClick={() => setActive(0)}
@@ -47,7 +44,7 @@ const SideNavbar = () => {
         <li
           className={
             active == 1
-              ? "bg-white border-[4px] border-black text-black  my-6 text-[1.5rem] w-[80%] mx-auto p-4 rounded-xl text-center cursor-pointer hover:bg-white  transition-all duration-300"
+              ? "bg-white border-[4px] border-b-[10px] border-black text-black border-b-[10px]border-b-[10px]  my-6 text-[1.5rem] w-[80%] mx-auto p-4 rounded-xl text-center cursor-pointer hover:bg-white  transition-all duration-300"
               : "text-[1.5rem] w-[80%] my-6 mx-auto p-4 rounded-xl text-center cursor-pointer border-[4px] border-[#f9e2af] hover:bg-white hover:text-[#F9E2AF] text-black transition-all duration-300"
           }
           onClick={() => setActive(1)}
@@ -58,7 +55,7 @@ const SideNavbar = () => {
         <li
           className={
             active == 2
-              ? "bg-white border-[4px] border-black text-black  my-6 text-[1.5rem] w-[80%] mx-auto p-4 rounded-xl text-center cursor-pointer hover:bg-white  transition-all duration-300"
+              ? "bg-white border-[4px] border-black border-b-[10px] text-black  my-6 text-[1.5rem] w-[80%] mx-auto p-4 rounded-xl text-center cursor-pointer hover:bg-white  transition-all duration-300"
               : "text-[1.5rem] w-[80%] my-6 mx-auto p-4 rounded-xl text-center border-[4px] border-[#f9e2af] cursor-pointer hover:bg-white hover:text-[#F9E2AF] text-black transition-all duration-300"
           }
           onClick={() => setActive(2)}
@@ -69,7 +66,7 @@ const SideNavbar = () => {
         <li
           className={
             active == 3
-              ? "bg-white border-[4px] border-black text-black  my-6 text-[1.5rem] w-[80%] mx-auto p-4 rounded-xl text-center cursor-pointer hover:bg-white  transition-all duration-300"
+              ? "bg-white border-[4px] border-black border-b-[10px] text-black  my-6 text-[1.5rem] w-[80%] mx-auto p-4 rounded-xl text-center cursor-pointer hover:bg-white  transition-all duration-300"
               : "text-[1.5rem] w-[80%] my-6 mx-auto p-4 rounded-xl text-center border-[4px] border-[#f9e2af] cursor-pointer hover:bg-white hover:text-[#F9E2AF] text-black transition-all duration-300"
           }
           onClick={() => setActive(3)}
@@ -77,17 +74,17 @@ const SideNavbar = () => {
           RECOMMENDED
         </li>
       </ul>
-      <ul className="mt-[7rem] text-black">
+      <ul className="mt-[6rem] text-black">
         <li
           onClick={() => setLogInActive(!logInActive)}
-          className="bg-white border-[4px] border-black hover:border-x-0  my-6 text-[1.5rem] w-[80%] mx-auto p-4 rounded-xl text-center cursor-pointer hover:bg-white  transition-all duration-300  hover:rounded-none hover:w-full flex items-center justify-center gap-[1rem]"
+          className="bg-white border-[4px] border-black border-b-[10px] hover:border-x-0  my-6 text-[1.5rem] w-[80%] mx-auto p-4 rounded-xl text-center cursor-pointer hover:bg-white  transition-all duration-300  hover:rounded-none hover:w-full flex items-center justify-center gap-[1rem]"
         >
           LogIn
           <FiLogIn size={30} />
         </li>
         <li
           className={
-            "bg-white   my-6 text-[1.5rem] w-[80%] mx-auto p-4 rounded-xl border-[4px] border-black hover:border-x-0 text-center cursor-pointer hover:bg-white  transition-all duration-300 hover:rounded-none hover:w-full flex items-center justify-center gap-[0.5rem]"
+            "bg-white   my-6 text-[1.5rem] border-b-[10px] w-[80%] mx-auto p-4 rounded-xl border-[4px] border-black hover:border-x-0 text-center cursor-pointer hover:bg-white  transition-all duration-300 hover:rounded-none hover:w-full flex items-center justify-center gap-[0.5rem]"
           }
           onClick={() => setSignUpActive(!signUpActive)}
         >
@@ -104,10 +101,61 @@ const SideNavbar = () => {
             : "hidden"
         }
       >
-        <div className="flex relative">
+        <div className="flex  flex-col relative">
           <h1 className="font-bold w-full text-[4rem] underline underline-2 text-center my-6 text-black">
             SignIn
           </h1>
+          <div className="flex w-[80%] mx-auto justify-around mt-14 gap-[2.5rem] ">
+            <div className="w-[44%]">
+              <input
+                placeholder="First Name"
+                className="w-full border-black border-[4px]  font-semibold rounded-xl px-4 py-3 text-black"
+              />
+            </div>
+            <div className="w-[44%] ">
+              <input
+                placeholder="Last Name"
+                className="w-full border-black border-[4px]  font-semibold rounded-xl px-4 py-3 text-black"
+              />
+            </div>
+          </div>
+          <div className="w-[80%] mx-auto text-black mt-6">
+            <p className="text-xl font-semibold my-4">Username?:</p>
+            <input
+              placeholder="username here..."
+              className="border-[4px] border-black px-4 py-3 rounded-xl w-[99%] "
+            />
+            <p className="text-xl font-semibold my-4">Password?:</p>
+            <input
+              placeholder="password here...🤐"
+              type="password"
+              className="border-[4px] border-black px-4 py-3 rounded-xl w-[99%] "
+            />
+          </div>
+          <div className="w-[80%] mx-auto mt-10">
+            <Button placeholder="Submit" />
+          </div>
+          <div>
+            <p className="text-black w-[79%] mx-auto mt-6">Or login using-</p>
+            <div className="w-[79%] mx-auto mt-14 flex justify-around items-center mb-10">
+              <BsGoogle
+                size={55}
+                className="p-2 rounded-xl hover:p-4 bg-[#f9e2af] text-black hover:bg-black hover:text-[#f9e2af] transition-all duration-300 cursor-pointer"
+              />
+              <BsFacebook
+                size={55}
+                className="p-2 rounded-xl hover:p-4 bg-[#f9e2af] text-black hover:bg-black hover:text-[#f9e2af] transition-all duration-300 cursor-pointer"
+              />
+              <BsTwitter
+                size={55}
+                className="p-2 rounded-xl hover:p-4 bg-[#f9e2af] text-black hover:bg-black hover:text-[#f9e2af] transition-all duration-300 cursor-pointer"
+              />
+              <BsGithub
+                size={55}
+                className="p-2 rounded-xl hover:p-4 bg-[#f9e2af] text-black hover:bg-black hover:text-[#f9e2af] transition-all duration-300 cursor-pointer"
+              />
+            </div>
+          </div>
           <RxCross1
             size={50}
             onClick={() => setSignUpActive(!signUpActive)}
@@ -127,6 +175,7 @@ const SideNavbar = () => {
           <h1 className="font-bold w-full underline underline-2 text-[4rem] text-center my-6 text-black">
             LogIn
           </h1>
+
           <div className="text-black flex justify-around w-[70%] mx-auto  mt-[8rem]">
             <FiUser
               size={60}
@@ -150,18 +199,23 @@ const SideNavbar = () => {
               onChange={(e) => setLoginPassowrd(e.target.value)}
             />
           </div>
-          <div className="w-[68%] mx-auto mt-10">
+          <div
+            className="w-[68%] mx-auto mt-10"
+            onClick={() => {
+              console.log(loginUsername, loginPassword);
+            }}
+          >
             <Button placeholder="Submit" />
           </div>
           <div className="w-[68%] mx-auto  mt-10">
             <p className="text-black font-semibold ">Continue as Guest User?</p>
           </div>
-          <div className="flex items-center justify-between w-[68%] bg-gray-200 p-6 transition-all duration-300 rounded-2xl mx-auto mt-5 hover:bg-gray-300 cursor-pointer text-black">
+          <div className="flex items-center justify-between gap-5 w-[68%] bg-gray-200 p-6 transition-all duration-300 rounded-2xl mx-auto mt-5 hover:bg-gray-300 cursor-pointer text-black">
             <FiUser
               size={70}
               className="bg-[#f9e2af] p-2 border-[4px] border-black rounded-full"
             />
-            <h1 className=" w-full text-2xl font-semibold ml-10">Guest</h1>
+            <h1 className=" w-full text-2xl font-semibold ">Guest</h1>
           </div>
           <RxCross1
             size={50}
